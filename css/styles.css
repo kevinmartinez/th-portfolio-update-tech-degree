@@ -24,12 +24,18 @@ h4,
   font-weight: 800;
 }
 
+/* Generic text center class to avoid CSS repeat */
+.text-center {
+  text-align: center;
+}
+
 /* Link Styles */
 
 a {
   text-decoration: none;
   color: #34495e;
 }
+
 a:hover {
   color: #2980b9;
 }
@@ -49,6 +55,7 @@ a:hover {
   position: fixed;
   text-align: center;
 }
+
 .nav {
   display: block;
   justify-content: space-around;
@@ -62,12 +69,15 @@ a:hover {
     margin-right: auto;
     color: #ecf0f1;
 }
+
 .nav li {
   padding: 5px 10px 10px 10px;
 }
+
 .nav a {
   transition: all 0.8s;
 }
+
 .nav a:hover {
   color: #ecf0f1;
 }
@@ -79,9 +89,11 @@ header {
   overflow: hidden;
   padding-top: 100px;
 }
+
 header {
   line-height: 1.5;
 }
+
 header .profile-image {
   margin-top: 50px;
   width: 180px;
@@ -89,11 +101,20 @@ header .profile-image {
   border-radius: 50%;
   border: 8px solid #2c3e50;
   transition: all .5s;
+  box-shadow: 0 0 0 10px rgba(52, 152, 219, 0.5);
 }
+
+.profile-image::after {
+  content: "HELO";
+  color: red;
+}
+
 header .profile-image:hover {
   transform: scale(1.2) rotate(5deg);
   border: 8px solid #2980b9;
+  box-shadow: 0 0 0 10px rgba(41, 128, 185, 0.2);
 }
+
 .tag {
   color: #2980b9;
   margin: 10px auto;
@@ -104,7 +125,6 @@ header .profile-image:hover {
 .lead {
   color: #95a5a6;
   font-weight: 500;
-  text-align: center;
 }
 
 .card {
@@ -117,12 +137,9 @@ header .profile-image:hover {
   border-radius: 6px;
   transition: all .5s;
 }
+
 .card:hover {
   border-color: #3498db;
-}
-
-.card h2 {
-  text-align: center;
 }
 
 ul.skills {
@@ -203,19 +220,24 @@ a.social {
   opacity: .4;
   transition: all .5s;
 }
+
 /* Removed a selector since it was a bit overqualified for it's purpose */
 .twitter {
   background-image: url(../images/twitter.svg);
 }
+
 .linkedin {
   background-image: url(../images/linkedin.svg);
 }
+
 .github {
   background-image: url(../images/github.svg);
 }
+
 .social:hover {
   opacity: 1;
 }
+
 .clearfix {
   clear: both;
 }
@@ -224,12 +246,12 @@ a.social {
 @media screen and (min-width: 720px) {
 
   .flex {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex;
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
+    display: -ms-flexbox;      /* TWEENER - IE 10 */
+    display: flex;
+    max-width: 1200px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin: 0 auto;
   }
 
   .main-nav {
@@ -266,9 +288,9 @@ a.social {
   }
 
   /* Quote */
-
   .quote-section {
-    background: url(../images/work-table-kevin.jpg) no-repeat center fixed;
+    background: url(../images/quote-background.jpg) no-repeat center fixed;
+    background-size: cover;
   }
 
   .cite {
